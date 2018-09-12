@@ -28,7 +28,7 @@ class BlogController extends Controller
     {
         $value = ElasticHelper::search('blog', 'slug', $slug);
 
-        return JsonHelper::item($value);
+        return JsonHelper::item($value[0]['_source']);
     }
 
     public function byCategory(Request $request, $slug)
