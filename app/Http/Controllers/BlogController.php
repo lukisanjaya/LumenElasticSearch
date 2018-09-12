@@ -21,7 +21,7 @@ class BlogController extends Controller
             return $data;
         });
 
-        return JsonHelper::collections($data);
+        return JsonHelper::collections($value);
     }
 
     public function showOneBlog($slug)
